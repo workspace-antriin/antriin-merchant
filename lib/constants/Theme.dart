@@ -1,6 +1,5 @@
 import 'dart:ui' show Color;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 Color kPrimaryColor = HexColor("#3b59a7");
@@ -14,28 +13,6 @@ Color kGreenColor = HexColor("#2bae38");
 Color kYellowColor = HexColor("#efdb24");
 Color kBlue = HexColor("0000FF");
 Color kRed = HexColor("FF0000");
-
-TextStyle blackTextStyle = GoogleFonts.poppins(
-  color: kBlackColor,
-);
-TextStyle whiteTextStyle = GoogleFonts.poppins(
-  color: kWhiteColor,
-);
-TextStyle greyTextStyle = GoogleFonts.poppins(
-  color: kGreyColor,
-);
-TextStyle purpleTextStyle = GoogleFonts.poppins(
-  color: kPrimaryColor,
-);
-TextStyle orangeTextStyle = GoogleFonts.poppins(
-  color: kOrangeColor,
-);
-TextStyle greenTextStyle = GoogleFonts.poppins(
-  color: kGreenColor,
-);
-TextStyle blueTextStyle = GoogleFonts.poppins(
-  color: kPrimaryColor,
-);
 
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;

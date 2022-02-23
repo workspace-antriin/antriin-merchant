@@ -1,12 +1,10 @@
-import 'package:antriin_merchant/pages/profile_page.dart';
+import 'package:antriin_merchant/models/merchant_model.dart';
 import 'package:antriin_merchant/pages/root_app.dart';
 import 'package:antriin_merchant/widgets/input.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:antriin_merchant/json/home_page_json.dart';
+
 import 'package:antriin_merchant/theme/colors.dart';
-import 'package:antriin_merchant/theme/styles.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:http/http.dart' as http;
 
 class SignInPage extends StatefulWidget {
   final String img;
@@ -16,7 +14,22 @@ class SignInPage extends StatefulWidget {
   _SignInPageState createState() => _SignInPageState();
 }
 
+Future<MerchantModel> createMerchant(String email, String password) async {
+  final String apiUrl = "https://antriin.com/api/login";
+  final response =
+      await http.post(apiUrl, body: {"email": email, "password": password});
+  if (response.statusCode == 200) {
+    final String responseString = response.body;
+    return merchantModelFromJson(responseString);
+  } else {
+    return null;
+  }
+}
+
 class _SignInPageState extends State<SignInPage> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  MerchantModel _merchant;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +72,7 @@ class _SignInPageState extends State<SignInPage> {
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width - (2 * 63),
-                  height: 198,
+                  height: 130,
                   margin: EdgeInsets.only(bottom: 11),
                   decoration: BoxDecoration(
                     image: DecorationImage(
@@ -76,13 +89,23 @@ class _SignInPageState extends State<SignInPage> {
                 Container(
                   width: double.infinity,
                   padding: EdgeInsets.symmetric(horizontal: 40),
-                  child: Input(),
+                  child: Input(
+                    controller: emailController,
+                  ),
                 ),
                 Container(
                   width: double.infinity,
                   padding: EdgeInsets.symmetric(horizontal: 40),
-                  child: Input(),
+                  child: Input(
+                    controller: passwordController,
+                  ),
                 ),
+                SizedBox(
+                  height: 32,
+                ),
+                _merchant == null
+                    ? Container()
+                    : Text("Selamat Anda ${_merchant.message} "),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -110,7 +133,14 @@ class _SignInPageState extends State<SignInPage> {
                     child: RaisedButton(
                       textColor: white,
                       color: primary,
-                      onPressed: () {
+                      onPressed: () async {
+                        final String email = emailController.text;
+                        final String password = passwordController.text;
+                        final MerchantModel merchant =
+                            await createMerchant(email, password);
+                        setState(() {
+                          _merchant = merchant;
+                        });
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => RootApp()),
