@@ -51,11 +51,11 @@ const List ThirdMenu = [
 const List exploreMenu = [
   {
     "img":
-        "https://images.unsplash.com/photo-1530016555861-3d1f3f5ca94b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZCUyMGRvbnV0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "https://1.bp.blogspot.com/-2N3DAWerD-M/W8fhEpyIi1I/AAAAAAAAHQw/P4BWV65TJbc1NAsDs23XUxM8PuxUNtS2gCLcBGAs/s1600/PT%2BBank%2BMandiri%2B%2528Persero%2529%2BTbk.jpg",
     "is_liked": true,
-    "name": "Dunkin' (122 Fulton St)",
-    "description": "Breakfast and Brunch - Donuts",
-    "time": "15-25 Min",
+    "name": "PT. Bank Mandiri Persero",
+    "description": "Layanan Antrian Teller & CS",
+    "time": "1000 Antrian Per Hari",
     "delivery_fee": "\$1.00 Delivery Fee",
     "rate": "4.5",
     "rate_number": "105"

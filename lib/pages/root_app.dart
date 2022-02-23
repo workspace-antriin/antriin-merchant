@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:antriin_merchant/pages/home_page.dart';
 import 'package:antriin_merchant/theme/colors.dart';
-import 'package:antriin_merchant/pages/activity_page';
-import 'package:antriin_merchant/pages/profile_page';
+import 'package:antriin_merchant/pages/activity_page.dart';
+import 'package:antriin_merchant/pages/profile_page.dart';
 
 class RootApp extends StatefulWidget {
   @override

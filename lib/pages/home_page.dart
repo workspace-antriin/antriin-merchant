@@ -510,7 +510,7 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "More to explore",
+                "Mitra AntriIn",
                 style: customTitle,
               ),
               SizedBox(

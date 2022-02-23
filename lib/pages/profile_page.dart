@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:antriin_merchant/json/home_page_json.dart';
+import 'package:antriin_merchant/json/profile_page_json.dart';
 import 'package:antriin_merchant/pages/store_detail_page.dart';
+import 'package:antriin_merchant/pages/sign_in_page.dart';
+
 import 'package:antriin_merchant/theme/colors.dart';
 import 'package:antriin_merchant/theme/styles.dart';
 import 'package:antriin_merchant/widgets/custom_slider.dart';
 import 'package:antriin_merchant/widgets/table-cell.dart';
-
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -33,7 +34,6 @@ class _ProfilePageState extends State<ProfilePage> {
             SizedBox(
               height: 15,
             ),
-            
           ],
         ),
         SizedBox(
@@ -48,8 +48,7 @@ class _ProfilePageState extends State<ProfilePage> {
               children: [
                 SizedBox(
                   height: 15,
-                ),            
-                  
+                ),
                 Text(
                   firstMenu[0]['name'],
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
@@ -75,16 +74,14 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     Expanded(
                         child: Text(
-                          "More Info",
-                          textAlign: TextAlign.right,
-                          style: TextStyle(
-                              fontSize: 14,
-                              color: primary,
-                              fontWeight: FontWeight.bold),
-                        )
-                      ),
+                      "More Info",
+                      textAlign: TextAlign.right,
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: primary,
+                          fontWeight: FontWeight.bold),
+                    )),
                   ],
-                  
                 ),
                 SizedBox(
                   height: 8,
@@ -138,20 +135,18 @@ class _ProfilePageState extends State<ProfilePage> {
                       width: 8,
                     ),
                     Container(
-                      
                       child: Padding(
                         padding: const EdgeInsets.all(5.0),
                         child: TableCellSettings(
-                  title: "",
-                  onTap: () {
-                    Navigator.pushNamed(context, '/pro');
-                  }),
+                            title: "",
+                            onTap: () {
+                              Navigator.pushNamed(context, '/pro');
+                            }),
                       ),
                     ),
                     SizedBox(
                       width: 8,
                     ),
-                    
                   ],
                 )
               ],
@@ -170,32 +165,30 @@ class _ProfilePageState extends State<ProfilePage> {
           height: 20,
         ),
         SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 34.0, right: 34.0, top: 8),
-                  child: RaisedButton(
-                    textColor: white,
-                    color: primary,
-                    onPressed: () {
-                      // Respond to button press
-                      Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (_) => SignInPage
-                    };,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4.0),
-                    ),
-                    child: Padding(
-                        padding: EdgeInsets.only(
-                            left: 16.0, right: 16.0, top: 12, bottom: 12),
-                        child: Text("LOGOUT",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 16.0))),
-                  ),
-                ),
+          width: double.infinity,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 34.0, right: 34.0, top: 8),
+            child: RaisedButton(
+              textColor: white,
+              color: kRedColor,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignInPage()),
+                );
+              },
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(4.0),
               ),
+              child: Padding(
+                  padding: EdgeInsets.only(
+                      left: 16.0, right: 16.0, top: 12, bottom: 12),
+                  child: Text("LOGOUT",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600, fontSize: 16.0))),
+            ),
+          ),
+        ),
       ],
     );
   }
