@@ -28,7 +28,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget getBody() {
     Widget build(BuildContext context) {
       return Scaffold(
-        backgroundColor: kBackgroundColor,
+        backgroundColor: white,
         body: ListView(
           children: [
             Stack(
@@ -120,13 +120,13 @@ class _SignInPageState extends State<SignInPage> {
                         padding: const EdgeInsets.only(
                             left: 34.0, right: 34.0, top: 8),
                         child: RaisedButton(
-                          textColor: kWhiteColor,
-                          color: kBackgroundColor,
+                          textColor: white,
+                          color: white,
                           onPressed: () {
                             // Respond to button press
                             Navigator.push(context,
-                                MaterialPageRoute(builder: (_) => ProfilePage));
-                          },
+                                MaterialPageRoute(builder: (_) => ProfilePage
+                          };,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(4.0),
                           ),
