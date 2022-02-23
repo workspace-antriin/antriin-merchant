@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:grab_eat_ui/json/home_page_json.dart';
-import 'package:grab_eat_ui/pages/store_detail_page.dart';
-import 'package:grab_eat_ui/theme/colors.dart';
-import 'package:grab_eat_ui/theme/styles.dart';
-import 'package:grab_eat_ui/widgets/custom_slider.dart';
-import 'package:animate_do/animate_do.dart';
+import 'package:antriin_merchant/json/home_page_json.dart';
+import 'package:antriin_merchant/pages/store_detail_page.dart';
+import 'package:antriin_merchant/theme/colors.dart';
+import 'package:antriin_merchant/theme/styles.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -52,7 +50,10 @@ class _HomePageState extends State<HomePage> {
                     'Hello, Barberking Jebres',
                     textAlign: TextAlign.center,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: kWhiteColor,
+                        fontWeight: FontWeight.normal),
                   ),
                 ),
                 SizedBox(
@@ -139,12 +140,16 @@ class _HomePageState extends State<HomePage> {
         SizedBox(
           height: 5,
         ),
-        Expanded(
-            child: Text(
-          "More Info",
-          style: TextStyle(
-              fontSize: 14, color: primary, fontWeight: FontWeight.bold),
-        )),
+        Container(
+          padding: const EdgeInsets.only(left: 50, right: 20),
+          child: Expanded(
+              child: Text(
+            "Tambah Layanan +",
+            textAlign: TextAlign.right,
+            style: TextStyle(
+                fontSize: 14, color: kBlue, fontWeight: FontWeight.bold),
+          )),
+        ),
         SizedBox(
           height: 15,
         ),
@@ -276,7 +281,124 @@ class _HomePageState extends State<HomePage> {
                   height: 15,
                 ),
                 Text(
-                  firstMenu[0]['name'],
+                  SecondMenu[0]['name'],
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "TokenIn",
+                      style: TextStyle(
+                        fontSize: 14,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Icon(
+                      Icons.info,
+                      color: Colors.grey,
+                      size: 15,
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      firstMenu[0]['description'],
+                      style: TextStyle(
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                          color: textFieldColor,
+                          borderRadius: BorderRadius.circular(3)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Icon(
+                          Icons.hourglass_bottom,
+                          color: primary,
+                          size: 16,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          color: textFieldColor,
+                          borderRadius: BorderRadius.circular(3)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Text(
+                          firstMenu[0]['time'],
+                          style: TextStyle(
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          color: textFieldColor,
+                          borderRadius: BorderRadius.circular(3)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Text(
+                          firstMenu[0]['status'],
+                          style: TextStyle(
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        Container(
+          width: size.width,
+          height: 10,
+          decoration: BoxDecoration(color: textFieldColor),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Container(
+          width: size.width,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 15, right: 15),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  ThirdMenu[0]['name'],
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
                 ),
                 SizedBox(
@@ -760,7 +882,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget backgroundImage() {
     return Container(
-      height: 250,
+      height: 230,
       width: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grab_eat_ui/constants/Theme.dart';
+import 'package:antriin_merchant/constants/Theme.dart';
 
 class CardHorizontal extends StatelessWidget {
   CardHorizontal(

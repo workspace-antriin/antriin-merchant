@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:grab_eat_ui/json/home_page_json.dart';
-import 'package:grab_eat_ui/pages/store_detail_page.dart';
-import 'package:grab_eat_ui/theme/colors.dart';
-import 'package:grab_eat_ui/theme/styles.dart';
-import 'package:grab_eat_ui/widgets/custom_slider.dart';
-import 'package:animate_do/animate_do.dart';
-import 'package:grab_eat_ui/widgets/table-cell.dart';
+import 'package:antriin_merchant/json/home_page_json.dart';
+import 'package:antriin_merchant/pages/store_detail_page.dart';
+import 'package:antriin_merchant/theme/colors.dart';
+import 'package:antriin_merchant/theme/styles.dart';
+import 'package:antriin_merchant/widgets/custom_slider.dart';
+import 'package:antriin_merchant/widgets/table-cell.dart';
+
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -179,8 +179,11 @@ class _ProfilePageState extends State<ProfilePage> {
                     color: primary,
                     onPressed: () {
                       // Respond to button press
-                      Navigator.pushReplacementNamed(context, '/home');
-                    },
+                      Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (_) => SignInPage
+                    };,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4.0),
                     ),

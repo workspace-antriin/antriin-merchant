@@ -11,7 +11,7 @@ Color kBackgroundColor = Color(0xffEBEBEB);
 Color kRedColor = HexColor("#d91d11");
 Color kGreenColor = HexColor("#2bae38");
 Color kYellowColor = HexColor("#efdb24");
-
+Color kBlue = HexColor("#0000FF");
 var primary = Color(0xFF00954d);
 var white = Color(0xFFFFFFFF);
 var bgColor = Color(0xFFf0f1f3);

@@ -8,9 +8,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:grab_eat_ui/main.dart';
-import 'package:grab_eat_ui/pages/home_page.dart';
-import 'package:grab_eat_ui/pages/root_app.dart';
+import 'package:antriin_merchant/main.dart';
+import 'package:antriin_merchant/pages/home_page.dart';
+import 'package:antriin_merchant/pages/root_app.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

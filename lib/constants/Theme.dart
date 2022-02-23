@@ -1,4 +1,48 @@
 import 'dart:ui' show Color;
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
+
+Color kPrimaryColor = HexColor("#3b59a7");
+Color kOrangeColor = Color(0xffEFDB24);
+Color kBlackColor = Color(0xff1F1449);
+Color kWhiteColor = Color(0xffFFFFFF);
+Color kGreyColor = Color(0xff9698A9);
+Color kBackgroundColor = Color(0xffEBEBEB);
+Color kRedColor = HexColor("#d91d11");
+Color kGreenColor = HexColor("#2bae38");
+Color kYellowColor = HexColor("#efdb24");
+Color kBlue = HexColor("0000FF");
+
+TextStyle blackTextStyle = GoogleFonts.poppins(
+  color: kBlackColor,
+);
+TextStyle whiteTextStyle = GoogleFonts.poppins(
+  color: kWhiteColor,
+);
+TextStyle greyTextStyle = GoogleFonts.poppins(
+  color: kGreyColor,
+);
+TextStyle purpleTextStyle = GoogleFonts.poppins(
+  color: kPrimaryColor,
+);
+TextStyle orangeTextStyle = GoogleFonts.poppins(
+  color: kOrangeColor,
+);
+TextStyle greenTextStyle = GoogleFonts.poppins(
+  color: kGreenColor,
+);
+TextStyle blueTextStyle = GoogleFonts.poppins(
+  color: kPrimaryColor,
+);
+
+FontWeight light = FontWeight.w300;
+FontWeight regular = FontWeight.w400;
+FontWeight medium = FontWeight.w500;
+FontWeight semiBold = FontWeight.w600;
+FontWeight bold = FontWeight.w700;
+FontWeight extraBold = FontWeight.w800;
+FontWeight black = FontWeight.w900;
 
 class ArgonColors {
   static const Color black = Color(0xFF000000);

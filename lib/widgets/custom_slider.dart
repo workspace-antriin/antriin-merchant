@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:grab_eat_ui/theme/colors.dart';
+import 'package:antriin_merchant/theme/colors.dart';
 
 class ActiveDot extends StatelessWidget {
   @override

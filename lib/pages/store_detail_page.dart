@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:grab_eat_ui/json/home_page_json.dart';
-import 'package:grab_eat_ui/theme/colors.dart';
-import 'package:grab_eat_ui/theme/styles.dart';
+import 'package:antriin_merchant/json/home_page_json.dart';
+import 'package:antriin_merchant/theme/colors.dart';
+import 'package:antriin_merchant/theme/styles.dart';
 import 'package:line_icons/line_icons.dart';
 
 class StoreDetailPage extends StatefulWidget {

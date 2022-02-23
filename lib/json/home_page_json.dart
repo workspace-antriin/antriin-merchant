@@ -26,6 +26,28 @@ const List firstMenu = [
     "status": "Aktif"
   }
 ];
+const List SecondMenu = [
+  {
+    "img":
+        "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+    "is_liked": true,
+    "name": "Layanan Cat Rambut",
+    "description": "085781083989",
+    "time": "09.00",
+    "status": "Aktif"
+  }
+];
+const List ThirdMenu = [
+  {
+    "img":
+        "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+    "is_liked": true,
+    "name": "Layanan Botakin Pala",
+    "description": "085781083989",
+    "time": "09.00",
+    "status": "Aktif"
+  }
+];
 const List exploreMenu = [
   {
     "img":
