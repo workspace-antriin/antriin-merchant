@@ -13,6 +13,7 @@ Color kRedColor = HexColor("#d91d11");
 Color kGreenColor = HexColor("#2bae38");
 Color kYellowColor = HexColor("#efdb24");
 Color kBlue = HexColor("0000FF");
+Color kRed = HexColor("FF0000");
 
 TextStyle blackTextStyle = GoogleFonts.poppins(
   color: kBlackColor,

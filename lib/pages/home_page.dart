@@ -1,5 +1,7 @@
+import 'package:antriin_merchant/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:antriin_merchant/constants/Theme.dart';
 import 'package:antriin_merchant/json/home_page_json.dart';
 import 'package:antriin_merchant/pages/store_detail_page.dart';
 import 'package:antriin_merchant/theme/colors.dart';
@@ -11,6 +13,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool switchValueOne;
+  bool switchValueTwo;
+  bool switchValueThree;
+
+  void initState() {
+    setState(() {
+      switchValueOne = true;
+      switchValueTwo = true;
+      switchValueThree = true;
+    });
+    super.initState();
+  }
+
   int activeMenu = 0;
   @override
   Widget build(BuildContext context) {
@@ -52,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                         fontSize: 14,
-                        color: kWhiteColor,
+                        color: ArgonColors.white,
                         fontWeight: FontWeight.normal),
                   ),
                 ),
@@ -147,7 +162,9 @@ class _HomePageState extends State<HomePage> {
             "Tambah Layanan +",
             textAlign: TextAlign.right,
             style: TextStyle(
-                fontSize: 14, color: kBlue, fontWeight: FontWeight.bold),
+                fontSize: 14,
+                color: ArgonColors.initial,
+                fontWeight: FontWeight.bold),
           )),
         ),
         SizedBox(
@@ -251,6 +268,22 @@ class _HomePageState extends State<HomePage> {
                             fontSize: 14,
                           ),
                         ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Switch.adaptive(
+                            value: switchValueOne,
+                            onChanged: (bool newValue) =>
+                                setState(() => switchValueOne = newValue),
+                            activeColor: ArgonColors.success,
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -370,6 +403,22 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Switch.adaptive(
+                            value: switchValueTwo,
+                            onChanged: (bool newValue) =>
+                                setState(() => switchValueTwo = newValue),
+                            activeColor: ArgonColors.success,
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 )
               ],
@@ -485,6 +534,22 @@ class _HomePageState extends State<HomePage> {
                             fontSize: 14,
                           ),
                         ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Switch.adaptive(
+                            value: switchValueThree,
+                            onChanged: (bool newValue) =>
+                                setState(() => switchValueThree = newValue),
+                            activeColor: ArgonColors.success,
+                          ),
+                        ],
                       ),
                     ),
                   ],
